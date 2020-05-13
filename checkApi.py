@@ -1,12 +1,11 @@
 import requests
 import json
 
-colId = [1, 2, 3]
+allIds = [1, 2, 3]
 
 url = "https://jsonplaceholder.typicode.com/posts/"
 
-
-def getById(args):
+def getById(colId):
     for id in colId:
         try:
             getById = url+str(id)
@@ -38,4 +37,5 @@ def printValues(result):
     print("\n")
 
 
-getAllValues()
+# getAllValues()
+getById(allIds)
