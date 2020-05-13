@@ -5,6 +5,7 @@ allIds = [1, 2, 3]
 
 url = "https://jsonplaceholder.typicode.com/posts/"
 
+
 def getById(colId):
     for id in colId:
         try:
@@ -18,15 +19,14 @@ def getById(colId):
 
 
 def getAllValues():
-    for id in colId:
-        try:
-            r = requests.get(url)
-            if(r.status_code == 200):
-                result = r.json()
-                for res in result:
-                    printValues(res)
-        except Exception as err:
-            print(f'Other error occurred: {err}')
+    try:
+        r = requests.get(url)
+        if(r.status_code == 200):
+            result = r.json()
+            for res in result:
+                printValues(res)
+    except Exception as err:
+        print(f'Other error occurred: {err}')
 
 
 def printValues(result):
@@ -37,4 +37,4 @@ def printValues(result):
     print("\n")
 
 # getAllValues()
-getById(allIds)
+# getById(allIds)
