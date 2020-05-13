@@ -36,6 +36,5 @@ def printValues(result):
     print("Body :  " + result["body"])
     print("\n")
 
-
 # getAllValues()
 getById(allIds)
